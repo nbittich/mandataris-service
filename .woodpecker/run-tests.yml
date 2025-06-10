@@ -3,7 +3,7 @@ steps:
     image: nestybox/ubuntu-jammy-systemd-docker:latest
     commands:
       - dockerd &
-      - sleep 30
+      - sleep 15
       - cd contract-tests
       - docker compose up -V  --abort-on-container-exit
 when:
