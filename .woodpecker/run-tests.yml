@@ -1,0 +1,11 @@
+steps:
+  run-tests:
+    image: nestybox/ubuntu-jammy-systemd-docker:latest
+    commands:
+      - dockerd &
+      - sleep 30
+      - cd contract-tests
+      - docker compose up -V  --abort-on-container-exit
+when:
+  - event: push
+    branch: master
