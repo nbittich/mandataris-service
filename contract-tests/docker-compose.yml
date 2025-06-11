@@ -46,7 +46,7 @@ services:
       NODE_ENV: 'development'
       MU_SPARQL_ENDPOINT: 'http://database:8890/sparql'
       LOG_SPARQL_ALL: 'true'
-    command: 'test -- -u'
+    command: 'test'
     depends_on:
       - target
       - database
